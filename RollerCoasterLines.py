@@ -1,7 +1,38 @@
 #  Stack – Elevator Drop Ride Simulation
+class Node:
+  def __init__(self, value=None, next=None):
+    self.next = None
+    self.value = value
 
 class Stack:
-  def __init__():
+  def __init__(self):
+    self.head = None
+    self.size = 0
+
+  def __repr__(self):
+    output = ""
+    nextNode = self.head
+    while nextNode is not None:
+      output += f"{nextNode.value} -> "
+      nextNode = nextNode.next
+    output += "None"
+    return output
+
+  def isEmpty(self):
+    return self.head is None
+    
+  def peek(self):
+    if not self.isEmpty():
+      return self.head.value
+        
+  def pop(self):
+    if not self.isEmpty():
+      val, self.head = self.head.value, self.head.next
+      return val
+        
+  def push(self, val):
+    aNode = Node(val)
+    aNode.next, self.head = self.head, aNode
 
 class ElevatorRide:
   '''
