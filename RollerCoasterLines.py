@@ -140,7 +140,7 @@ class RollerCoasterRide:
       guest = self.queue.dequeue()
       print(f"{guest} has boarded the ride.")
     print("=============================================")
-    print("The coaster is now activated with all riders on board! \n Please wait until the next ride if you are waiting.")
+    print("The coaster is now activated with all riders on board! \nPlease wait until the next ride if you are waiting.")
 
 # ========================================================
 
@@ -161,24 +161,11 @@ class VIPRide:
 
 # ========================================================
 
+#test for elevator ride
 def main():
     #test for no people in ride
-    rideRC = RollerCoasterRide()
-    print("Ride Queue:", rideRC.queue)
-    rideRC.start_ride(0)
-    print("----------------------------------------\n")
-    #test for people joining the ride
-    print("Ride Queue #1:", rideRC.queue)
-    rideRC.join_queue("test1")
-    rideRC.join_queue("test2")
-    rideRC.join_queue("test3")
-    rideRC.join_queue("test4")
-    print("Ride Queue:", rideRC.queue)
-    print("----------------------------------------\n")
-    rideRC.start_ride(2) # each roller coaster run only 2 ppl
-    print("----------------------------------------\n") #spacer
-    print("\nRide Queue after Ride Queue #1:", rideRC.queue)
-    rideRC.start_ride(4) 
+    rideED = ElevatorRide()
+    
     
 if __name__ == "__main__":
     main()
