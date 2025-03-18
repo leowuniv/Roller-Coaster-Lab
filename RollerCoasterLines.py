@@ -1,17 +1,3 @@
-#  Stack – Elevator Drop Ride Simulation
-
-class Stack:
-  def __init__():
-
-class ElevatorRide:
-  '''
-  This class uses a stack to simulate guests entering an elevator ride where each guests boards one at a time and exit in reverse order (the last person in is the first out).
-  '''
-
-# method board_guest(guest_name)
-
-# method start_ride(capacity)
-
 # ========================================================
 
 # Queue – Roller Coaster Ride Simulation
@@ -76,20 +62,31 @@ class RollerCoasterRide:
   '''
   This class uses a queue to manage guests waiting for the roller coaster where guests enter the queue and exit in the same order they arrived (first in, first out).
   '''
+  def __init__(self):
+    self.queue = Queue()
 
-# method join_queue(guest_name)
+  # method join_queue(guest_name)
 
-# method start_ride(capacity)
+  def join_queue(self, guest_name): # add guest to the line
+    self.queue.enqueue(guest_name)
+    print(f"{guest_name} has joined the line.")
+
+  # method start_ride(capacity)
+
+  def start_ride(self, capacity): # simulates loading and running the coaster
+    if self.queue.isEmpty():
+      print("There is no one in queue for the ride to start.")
+      return
+     
+    print("Preparing to start the rollar coaster ride...") # simulate loading
+    print("=============================================")
+    print("All riders, please board the ride!")
+    print("=============================================")
+    for i in range(min(capacity, self.queue.getLength())):
+      guest = self.queue.dequeue()
+      print(f"{guest} has boarded the ride.")
+    print("=============================================")
+    print("The coaster is now activated with all riders on board! \n Please wait until the next ride if you are waiting.")
 
 # ========================================================
 
-# Priority Queue – VIP Guest Management
-
-class VIPRide:
-  '''
-  This class uses a priority queue to manage guests based on priority levels (e.g., VIP or Fast Pass holders) or where guests with higher priority board the ride before others.
-  '''
-
-# method add_guest(guest_name, priority)
-
-# method start_ride(capacity)
