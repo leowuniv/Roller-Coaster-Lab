@@ -121,15 +121,26 @@ class RollerCoasterRide:
 
   # method join_queue(guest_name)
 
-  def join_queue(guest_name): # add guest to the line
+  def join_queue(self, guest_name): # add guest to the line
     self.queue.enqueue(guest_name)
-    print(f"{guest_name}")
+    print(f"{guest_name} has joined the line.")
 
   # method start_ride(capacity)
 
-  def start_ride(capacity): # simulates loading and running the coaster
-
-
+  def start_ride(self, capacity): # simulates loading and running the coaster
+    if self.queue.isEmpty():
+      print("There is no one in queue for the ride to start.")
+      return
+     
+    print("Preparing to start the rollar coaster ride...") # simulate loading
+    print("=============================================")
+    print("All riders, please board the ride!")
+    print("=============================================")
+    for i in range(min(capacity, self.queue.getLength())):
+      guest = self.queue.dequeue()
+      print(f"{guest} has boarded the ride.")
+    print("=============================================")
+    print("The coaster is now activated with all riders on board! \n Please wait until the next ride if you are waiting.")
 
 # ========================================================
 
@@ -147,3 +158,27 @@ class VIPRide:
 # method start_ride(capacity)
 
   def start_ride(capacity): # simulates ride, board based on priority 
+
+# ========================================================
+
+def main():
+    #test for no people in ride
+    rideRC = RollerCoasterRide()
+    print("Ride Queue:", rideRC.queue)
+    rideRC.start_ride(0)
+    print("----------------------------------------\n")
+    #test for people joining the ride
+    print("Ride Queue #1:", rideRC.queue)
+    rideRC.join_queue("test1")
+    rideRC.join_queue("test2")
+    rideRC.join_queue("test3")
+    rideRC.join_queue("test4")
+    print("Ride Queue:", rideRC.queue)
+    print("----------------------------------------\n")
+    rideRC.start_ride(2) # each roller coaster run only 2 ppl
+    print("----------------------------------------\n") #spacer
+    print("\nRide Queue after Ride Queue #1:", rideRC.queue)
+    rideRC.start_ride(4) 
+    
+if __name__ == "__main__":
+    main()
