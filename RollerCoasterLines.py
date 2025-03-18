@@ -74,7 +74,29 @@ class ElevatorRide:
 def main():
     #test for no people in ride
     rideED = ElevatorRide()
-    
+    print(rideED.stack)
+    rideED.start_ride(0)
+    print("===============================\n")
+    # test boarding guests ; last person in should be first person out
+    rideED.board_guest("test1")
+    rideED.board_guest("test2")
+    rideED.board_guest("test3")
+    rideED.board_guest("test4") 
+    rideED.board_guest("test5") 
+    rideED.board_guest("test6") 
+    rideED.board_guest("test7") 
+    rideED.board_guest("test8") 
+    rideED.board_guest("test9") 
+    rideED.board_guest("test10") # last person to board
+    print("Stack:", rideED.stack)
+    print("===============================\n")
+    # testing ride start
+    rideED.start_ride(10)
+    print("Stack:", rideED.stack)
+    print("===============================\n")
+    # test to start ride again (no one left)
+    rideED.start_ride(10)
+    print("===============================\n")
     
 if __name__ == "__main__":
     main()
