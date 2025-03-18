@@ -38,6 +38,15 @@ class ElevatorRide:
   '''
   This class uses a stack to simulate guests entering an elevator ride where each guests boards one at a time and exit in reverse order (the last person in is the first out).
   '''
+  def __init__(self):
+    self.stack = Stack()
+
+  def board_guest(self, guest_name): # add guest to elevator
+
+  def start_ride(self, capacity): # simulates ride
+    print("List of guests exiting the ride")
+    print("===============================")
+
 
 # method board_guest(guest_name)
 
