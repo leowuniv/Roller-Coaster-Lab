@@ -106,7 +106,7 @@ def main():
     print("----------------------------------------\n")
     rideRC.start_ride(2) # each roller coaster run only 2 ppl
     print("----------------------------------------\n") #spacer
-    print("\nRide Queue after Ride Queue #1:", rideRC.queue)
+    print("Ride Queue after Ride Queue #1:", rideRC.queue)
     rideRC.start_ride(4) 
     
 if __name__ == "__main__":
