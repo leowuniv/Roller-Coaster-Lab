@@ -108,6 +108,8 @@ def main():
     print("----------------------------------------\n") #spacer
     print("Ride Queue after Ride Queue #1:", rideRC.queue)
     rideRC.start_ride(4) 
+    print("----------------------------------------\n") #spacer
+    rideRC.start_ride(10) 
     
 if __name__ == "__main__":
     main()
