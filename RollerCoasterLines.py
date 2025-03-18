@@ -117,9 +117,15 @@ class RollerCoasterRide:
   This class uses a queue to manage guests waiting for the roller coaster where guests enter the queue and exit in the same order they arrived (first in, first out).
   '''
 
-# method join_queue(guest_name)
+  # method join_queue(guest_name)
 
-# method start_ride(capacity)
+  def join_queue(guest_name): # add guest to the line
+
+  # method start_ride(capacity)
+
+  def start_ride(capacity): # simulates loading and running the coaster
+
+
 
 # ========================================================
 
@@ -132,4 +138,8 @@ class VIPRide:
 
 # method add_guest(guest_name, priority)
 
+  def add_guest(guest_name, priority): # adds guest with their priority 
+
 # method start_ride(capacity)
+
+  def start_ride(capacity): # simulates ride, board based on priority 
