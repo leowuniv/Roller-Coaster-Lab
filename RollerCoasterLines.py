@@ -69,6 +69,7 @@ def main():
     rideED.add_guest("test2", 3)
     rideED.add_guest("test3", 2)
     rideED.add_guest("test4", 1)
+    rideED.add_guest("test5", 5)
     print("Ride Queue:", rideED.pQueue)
     print("----------------------------------------\n")
     rideED.start_ride(2) # each roller coaster run only 2 ppl
