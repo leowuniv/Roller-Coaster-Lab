@@ -86,7 +86,7 @@ class RollerCoasterRide:
       guest = self.queue.dequeue()
       print(f"{guest} has boarded the ride.")
     print("=============================================")
-    print("The coaster is now activated with all riders on board! \n Please wait until the next ride if you are waiting.")
+    print("The coaster is now activated with all riders on board! \nPlease wait until the next ride if you are waiting.")
 
 # ========================================================
 
