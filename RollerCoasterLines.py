@@ -37,6 +37,7 @@ class Stack:
   def push(self, val):
     aNode = Node(val)
     aNode.next, self.head = self.head, aNode
+    self.size += 1
 
 class ElevatorRide:
   '''
