@@ -9,7 +9,11 @@ This class uses a priority queue to manage guests based on priority levels (e.g.
 
 # method add_guest(guest_name, priority)
 
+    def add_guest(guest_name, priority): # adds guest with their priority 
+
 # method start_ride(capacity)
+
+    def start_ride(capacity): # simulates ride, board based on priority 
 
 # ========================================================
 
@@ -17,7 +21,6 @@ This class uses a priority queue to manage guests based on priority levels (e.g.
 def main():
     #test for no people in ride
     rideED = VIPRide()
-    
     
 if __name__ == "__main__":
     main()
