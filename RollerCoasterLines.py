@@ -116,10 +116,14 @@ class RollerCoasterRide:
   '''
   This class uses a queue to manage guests waiting for the roller coaster where guests enter the queue and exit in the same order they arrived (first in, first out).
   '''
+  def __init__(self):
+    self.queue = Queue()
 
   # method join_queue(guest_name)
 
   def join_queue(guest_name): # add guest to the line
+    self.queue.enqueue(guest_name)
+    print(f"{guest_name}")
 
   # method start_ride(capacity)
 
