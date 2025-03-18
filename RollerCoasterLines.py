@@ -1,3 +1,5 @@
+# ========================================================
+
 #  Stack – Elevator Drop Ride Simulation
 
 class Node:
@@ -29,6 +31,7 @@ class Stack:
   def pop(self):
     if not self.isEmpty():
       val, self.head = self.head.value, self.head.next
+      self.size -= 1
       return val
         
   def push(self, val):
@@ -44,11 +47,25 @@ class ElevatorRide:
 
 # method board_guest(guest_name)
   def board_guest(self, guest_name): # add guest to elevator
+    self.stack.push(guest_name)
+    print(f"{guest_name} has boarded the elevator ride.") #board one at a time
 
 # method start_ride(capacity)
   def start_ride(self, capacity): # simulates ride
-    print("List of guests exiting the ride")
+    if self.stack.isEmpty(): # check if stack is empty, no one in line to enter ride
+      print("The ride cannot be started since there is no one to board the ride.")
+      return
+
+    print("Ride preparing to start...")
+    print("-------------------------------")
+    print("Ride in action!!!")
+    print("-------------------------------")
+    print("Ride completed.")
+    print("List of guests exiting the ride:")
     print("===============================")
+    for i in range(min(capacity, self.stack.size)):
+      guest = self.stack.pop()
+      print(f"{guest} has exited the elevator ride.") # display guest names as they exit (in reverse order)
 
 # ========================================================
 
