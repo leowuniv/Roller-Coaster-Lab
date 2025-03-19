@@ -299,3 +299,5 @@ if __name__ == "__main__":
     main1() # roller coaster ride
     main2() # elevator ride
     main3() # vip ride
+
+# Can do custom inputs if needed more advanced in the future
